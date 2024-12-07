@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "remix vite:build",
-    "dev": "shopify app dev",
+    "dev": "shopify app dev -s tsuzucle-checkout.myshopify.com",
     "config:link": "shopify app config link",
     "generate": "shopify app generate",
     "deploy": "shopify app deploy",
@@ -29,6 +29,7 @@
     "@remix-run/react": "^2.7.1",
     "@remix-run/serve": "^2.7.1",
     "@shopify/app-bridge-react": "^4.1.2",
+    "@shopify/cli": "^3.71.4",
     "@shopify/polaris": "^12.0.0",
     "@shopify/shopify-app-remix": "^3.3.2",
     "@shopify/shopify-app-session-storage-prisma": "^5.0.2",

@@ -1,9 +1,9 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "5eaf58e8709c1f67aa7e8d47b83af8b8"
+client_id = "3d577bb7464724e76e2b62daa39672fb"
 name = "dev-remix-app"
 handle = "dev-remix-app-2"
-application_url = "https://example.com/"
+application_url = "https://represented-liver-alot-floors.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,26 +11,22 @@ embedded = true
 scopes = ""
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://represented-liver-alot-floors.trycloudflare.com/auth/callback",
+  "https://represented-liver-alot-floors.trycloudflare.com/auth/shopify/callback",
+  "https://represented-liver-alot-floors.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-10"
 
   [[webhooks.subscriptions]]
-  uri = "/webhooks/customers/data_request"
-  compliance_topics = [ "customers/data_request" ]
-
-  [[webhooks.subscriptions]]
-  uri = "/webhooks/customers/redact"
-  compliance_topics = [ "customers/redact" ]
-
-  [[webhooks.subscriptions]]
-  uri = "/webhooks/shop/redact"
-  compliance_topics = [ "shop/redact" ]
-
-  [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
+  uri = "https://db84-61-193-58-237.ngrok-free.app/webhooks/app/uninstalled"
 
 [pos]
 embedded = false
+
+[build]
+dev_store_url = "tsuzucle-checkout.myshopify.com"
+automatically_update_urls_on_dev = true
